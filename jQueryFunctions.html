@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQueryFunctions</title>
+    <link rel="stylesheet" type="text/css" href="jQueryFunctions.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('button.clickFunk').click(function(){
+        alert('click of the button');
+      })
+
+      $('a.hideFunk').click(function(){
+        $('li.hideFunk').hide();
+      })
+
+      $('a.showFunk').click(function(){
+        $('li.hideFunk').show();
+      })
+
+      $('a.toggleFunk').click(function(){
+        $('li').toggle();
+      })
+
+      //Images should be hidden at the first load of the page:
+      $('img.slideDownFunk').hide();
+
+      //Image should slide down and stay visible when button is clicked:
+      $('button.slideDownFunk').click(function(){
+        $('img.slideDownFunk').slideDown('slow', function(){
+          $('img.slideDownFunk').show();
+        });
+      })
+
+      //Image should slide up and stay hidden when button is clicked:
+      $('button.slideUpFunk').click(function(){
+        $('img.slideUpFunk').slideUp('slow', function(){
+          $('img.slideUpFunk').hide();
+        });
+      })
+
+      //Images should be hidden at the first load of the page:
+      $('img.slideToggleFunk').hide();
+
+      //Image should slide down when button is clicked and slide up or down on consecutive clicks:
+      $('button.slideToggleFunk').click(function(){
+        $('img.slideToggleFunk').slideToggle('slow', function(){
+        });
+      })
+
+      //Images should be hidden at the first load of the page:
+      $('img.fadeInFunk').hide();
+
+      //Image should fade in when button is clicked:
+      $('button.fadeInFunk').click(function(){
+        $('img.fadeInFunk').fadeIn('slow', function(){
+        });
+      })
+
+    })
+    </script>
+  </head>
+  <body>
+    <h1>Fun with jQuery Functions</h1>
+    <p>In this assignment we create a web page that uses the following jQuery functions: .click .hide .show .toggle .slideDown .slideUp .slideToggle .fadeIn .fadeOut .addClass .before .after .append .html .attr .val .text .data</p>
+    <hr></hr>
+    <div class="clickFunk">
+      <h2>.click</h2>
+      <p>Click the button below to see the .click function in-action (alert will appear):</p>
+      <button class="clickFunk">Click Here!</button>
+    </div>
+    <hr></hr>
+
+    <div class="hideFunk">
+      <h2>.hide</h2>
+      <p>Click the link below to see the .hide function in-action (list items will disapper):</p>
+      <a class="hideFunk" href="#">Click Here!</a>
+      <ul>
+        <li class="hideFunk">Ethical Chillwave Raclette</li>
+        <li class="hideFunk">Synth Paleo Chambray Butcher</li>
+        <li class="hideFunk">Pork Belly Keytar Poké Cray Beard</li>
+        <li class="hideFunk">Kickstarter Kitsch Knausgaard</li>
+        <li class="hideFunk">Sustainable Schlitz Stumptown</li>
+      </ul>
+    </div>
+    <hr></hr>
+
+    <div class="showFunk">
+      <h2>.show</h2>
+      <p>Click the link below to see the .show function in-action (list items will reappear):</p>
+      <a class="showFunk" href="#">Click Here!</a>
+    </div>
+    <hr></hr>
+
+    <div class="toggleFunk">
+      <h2>.toggle</h2>
+      <p>Click the link below to see the .toggle function in-action (list items will disappear with one click and reappear with second click):</p>
+      <a class="toggleFunk" href="#">Click Here!</a>
+      <ol>
+        <li>Blog williamsburg fashion axe, heirloom occupy pok pok venmo schlitz.</li>
+        <li>Church-key kale chips farm-to-table chambray artisan lumbersexual jean shorts fingerstache.</li>
+        <li>Pug paleo bicycle rights beard messenger bag lo-fi hell of la croix fixie.</li>
+        <li>Bespoke hell of gluten-free man braid shoreditch synth forage.</li>
+        <li>Poutine typewriter thundercats viral woke.</li>
+      </ol>
+    </div>
+    <hr></hr>
+
+    <div class="slideDownFunk">
+      <h2>.slideDown</h2>
+      <p>Click the button below to see the .slideDown function in-action (an image will slide down):</p>
+      <button class="slideDownFunk">Click Here!</button>
+      <img class="slideDownFunk" src="jQueryFunctionsImages/slideDownPic.jpg" alt="Image of pine trees.">
+    </div>
+    <hr></hr>
+
+    <div class="slideUpFunk">
+      <h2>.slideUp</h2>
+      <p>Click the button below to see the .slideUp function in-action (the image will slide up):</p>
+      <button class="slideUpFunk">Click Here!</button>
+      <img class="slideUpFunk" src="jQueryFunctionsImages/slideUpPic.jpg" alt="Image of a forest of snow-covered pine trees.">
+    </div>
+    <hr></hr>
+
+    <div class="slideToggleFunk">
+      <h2>.slideToggle</h2>
+      <p>Click the button below to see the .slideToggle function in-action (the image will slide up and down with each click):</p>
+      <button class="slideToggleFunk">Click Here!</button>
+      <img class="slideToggleFunk" src="jQueryFunctionsImages/slideTogglePic.jpg" alt="Image of snow-covered pine trees close up.">
+    </div>
+    </div>
+    <hr></hr>
+
+    <div class="fadeInFunk">
+      <h2>.fadeIn</h2>
+      <p>Click the button below to see the .fadeIn function in-action (an image will fade in and become visible):</p>
+      <button class="fadeInFunk">Click Here!</button>
+      <img class="fadeInFunk" src="jQueryFunctionsImages/fadeInPic.jpg" alt="Image of pine trees on foggy winter day.">
+    </div>
+    <hr></hr>
+
+    <h2>.fadeOut</h2>
+    <hr></hr>
+
+    <h2>.addClass</h2>
+    <hr></hr>
+
+    <h2>.before</h2>
+    <hr></hr>
+
+    <h2>.after</h2>
+    <hr></hr>
+
+    <h2>.append</h2>
+    <hr></hr>
+
+    <h2>.html</h2>
+    <hr></hr>
+
+    <h2>.attr</h2>
+    <hr></hr>
+
+    <h2>.val</h2>
+    <hr></hr>
+
+    <h2>.text</h2>
+    <hr></hr>
+
+    <h2>.data</h2>
+    <hr></hr>
+
+  </body>
+</html>
